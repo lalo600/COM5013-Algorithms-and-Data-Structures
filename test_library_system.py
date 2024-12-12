@@ -14,3 +14,7 @@ def test_borrowing_records():
     records.remove_record(101, 1)
     assert len(records.get_user_records(101)) == 0
 
+if __name__ == "__main__":
+    test_library_catalog()
+    test_borrowing_records()
+    print("All tests passed!")
