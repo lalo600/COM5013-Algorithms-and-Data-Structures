@@ -35,16 +35,3 @@ class BorrowingRecords:
     def get_user_records(self, user_id):
         # Get all borrowing records for a specific user
         return [record for record in self.borrow_records if record["user_id"] == user_id]
-
-
-# Example Usage
-if __name__ == "__main__":
-    # Create and use the library catalog
-    catalog = LibraryCatalog()
-    catalog.add_book(1, {"title": "1984", "author": "George Orwell"})
-    print(catalog.search_book(1))
-
-    # Create and manage borrowing records
-    records = BorrowingRecords()
-    records.add_record(101, 1)
-    print(records.get_user_records(101))
