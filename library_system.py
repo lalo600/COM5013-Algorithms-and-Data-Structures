@@ -1,12 +1,12 @@
 class BookCatalog:
-  def _init_(self):
-    self.books = {}
+    def __init__(self):
+        self.books = {}
 
-def add_book(self, book_id, book_info):
-        self.catalog[book_id] = book_info
+    def add_book(self, book_id, details):
+        self.books[book_id] = details
 
-    def remove_book(self, book_id):
-        self.catalog.pop(book_id, None)
+    def delete_book(self, book_id):
+        self.books.pop(book_id, "Book not found")
 
-    def search_book(self, book_id):
-        return self.catalog.get(book_id, "Book not found")
+    def find_book(self, book_id):
+        return self.books.get(book_id, "Book not available")
