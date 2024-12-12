@@ -13,3 +13,8 @@ def test_loan_records():
     assert len(loans.list_user_loans(101)) == 1
     loans.remove_loan(101, 1)
     assert len(loans.list_user_loans(101)) == 0
+
+if __name__ == "__main__":
+    test_book_catalog()
+    test_loan_records()
+    print("All tests passed!")
