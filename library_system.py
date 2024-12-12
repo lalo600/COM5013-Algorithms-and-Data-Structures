@@ -25,12 +25,4 @@ class LoanRecords:
     def list_user_loans(self, user_id):
         return [loan for loan in self.loans if loan["user_id"] == user_id]
 
-#Example Usage
-if __name__ == "__main__":
-    catalog = BookCatalog()
-    catalog.add_book(1, {"title": "1984", "author": "George Orwell"})
-    print(catalog.find_book(1))
 
-    loans = LoanRecords()
-    loans.add_loan(101, 1)
-    print(loans.list_user_loans(101))
