@@ -7,3 +7,10 @@ def test_library_catalog():
     catalog.remove_book(1)
     assert catalog.search_book(1) == "Book not found"
 
+def test_borrowing_records():
+    records = BorrowingRecords()
+    records.add_record(101, 1)
+    assert len(records.get_user_records(101)) == 1
+    records.remove_record(101, 1)
+    assert len(records.get_user_records(101)) == 0
+
