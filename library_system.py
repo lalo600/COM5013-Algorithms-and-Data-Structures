@@ -24,3 +24,5 @@ class LoanRecords:
 
     def list_user_loans(self, user_id):
         return [loan for loan in self.loans if loan["user_id"] == user_id]
+
+hello
